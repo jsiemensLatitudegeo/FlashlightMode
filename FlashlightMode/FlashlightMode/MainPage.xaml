@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013"
+             x:Class="FlashlightMode.MainPage">
+
+    <Grid>
+        <esri:MapView x:Name="MapView"/>
+        <StackLayout BackgroundColor="White" VerticalOptions="End" Margin="10,0,10,50">
+            <FlexLayout x:Name="MainToolbar" Wrap="Wrap">
+                <Button Text="Create Features" Clicked="CreateFeatures_Clicked"/>
+                <Button Text="Clear Cache" Clicked="ClearCache_Clicked"/>
+                <Button Text="Zoom To Location" Clicked="ZoomTo_Clicked"/>
+                <Button Text="Follow Me" Clicked="FollowMe_Clicked"/>
+            </FlexLayout>
+            <FlexLayout x:Name="AddFeatuersToolbar" Wrap="Wrap" IsVisible="False">
+                <Label Text="Click the map to add points..."/>
+                <Button Text="Apply" Clicked="Apply_Clicked"/>
+                <Button Text="Cancel" Clicked="Cancel_Clicked"/>
+            </FlexLayout>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
